@@ -15,22 +15,24 @@ namespace From_Test
         public Form1()
         {
 
-           
+
             InitializeComponent();
-            for (int i = 1; i<= 6; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 for (int s = 1; s <= 4; s++)
                 {
                     TestButton testButton = new TestButton();
 
                     //ボタンの位置
-                    testButton.Location = new Point(100 * i, 50 * s);
+                    testButton.Location = new Point(50 * i, 50 * s);
 
 
                     //サイズ設定
-                    testButton.Size = new Size(100, 100);
+                    testButton.Size = new Size(50, 50);
 
                     testButton.Text = "押すなよその二";
+
+                    testButton.Click += hogehogeClick;
 
                     //コントロールにボタンの追加
                     Controls.Add(testButton);
@@ -38,12 +40,19 @@ namespace From_Test
                 }
 
             }
-            
-            
+
+
 
 
 
         }
+
+
+        private void hogehogeClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("え、何ですか？");
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
