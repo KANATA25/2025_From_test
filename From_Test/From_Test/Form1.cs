@@ -10,35 +10,38 @@ using System.Windows.Forms;
 
 namespace From_Test
 {
-  
+
 
     public partial class Form1 : Form
     {
-            const int BUTTON_SIZE_X = 100;
-            const int BUTTON_SIZE_Y = 100;
+        const int BUTTON_SIZE_X = 100;
+        const int BUTTON_SIZE_Y = 100;
 
-        const int BOARD_SIZE_X = 2;
-        const int BOARD_SIZE_Y = 2;
+        const int BOARD_SIZE_X = 3;
+        const int BOARD_SIZE_Y = 3;
+
+        private TestButton[,] _buttonArrey;
 
         public Form1()
         {
 
 
             InitializeComponent();
-            for (int i = 0; i <= BOARD_SIZE_X; i++)
+            _buttonArrey = new TestButton[BOARD_SIZE_Y, BOARD_SIZE_X];
+            for (int i = 0; i < BOARD_SIZE_X; i++)
             {
-                for (int s = 0; s <= BOARD_SIZE_Y; s++)
+                for (int s = 0; s < BOARD_SIZE_Y; s++)
                 {
                     TestButton testButton = new TestButton(new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * s), new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "押すなよその二");
 
-               
+                    _buttonArrey[s, i] = testButton;
                     //コントロールにボタンの追加
                     Controls.Add(testButton);
 
                 }
 
             }
-
+            _buttonArrey[1, 1].SetEmable(true);
 
 
 
