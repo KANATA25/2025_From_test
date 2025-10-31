@@ -10,30 +10,28 @@ using System.Windows.Forms;
 
 namespace From_Test
 {
+  
+
     public partial class Form1 : Form
     {
+            const int BOTTON_SIZE_X = 100;
+            const int BOTTON_SIZE_Y = 100;
+
+        const int BOARD_SIZE_X = 3;
+        const int BOARD_SIZE_Y = 3;
+
         public Form1()
         {
 
 
             InitializeComponent();
-            for (int i = 1; i <= 6; i++)
+            for (int i = 1; i <= BOARD_SIZE_X; i++)
             {
-                for (int s = 1; s <= 4; s++)
+                for (int s = 1; s <= BOARD_SIZE_Y; s++)
                 {
-                    TestButton testButton = new TestButton();
+                    TestButton testButton = new TestButton(new Point(BOTTON_SIZE_X * i, BOTTON_SIZE_Y * s), new Size(BOTTON_SIZE_X, BOTTON_SIZE_Y), "押すなよその二");
 
-                    //ボタンの位置
-                    testButton.Location = new Point(50 * i, 50 * s);
-
-
-                    //サイズ設定
-                    testButton.Size = new Size(50, 50);
-
-                    testButton.Text = "押すなよその二";
-
-                    testButton.Click += hogehogeClick;
-
+               
                     //コントロールにボタンの追加
                     Controls.Add(testButton);
 
