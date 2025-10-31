@@ -14,22 +14,22 @@ namespace From_Test
 
     public partial class Form1 : Form
     {
-            const int BOTTON_SIZE_X = 100;
-            const int BOTTON_SIZE_Y = 100;
+            const int BUTTON_SIZE_X = 100;
+            const int BUTTON_SIZE_Y = 100;
 
-        const int BOARD_SIZE_X = 3;
-        const int BOARD_SIZE_Y = 3;
+        const int BOARD_SIZE_X = 2;
+        const int BOARD_SIZE_Y = 2;
 
         public Form1()
         {
 
 
             InitializeComponent();
-            for (int i = 1; i <= BOARD_SIZE_X; i++)
+            for (int i = 0; i <= BOARD_SIZE_X; i++)
             {
-                for (int s = 1; s <= BOARD_SIZE_Y; s++)
+                for (int s = 0; s <= BOARD_SIZE_Y; s++)
                 {
-                    TestButton testButton = new TestButton(new Point(BOTTON_SIZE_X * i, BOTTON_SIZE_Y * s), new Size(BOTTON_SIZE_X, BOTTON_SIZE_Y), "押すなよその二");
+                    TestButton testButton = new TestButton(new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * s), new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "押すなよその二");
 
                
                     //コントロールにボタンの追加
