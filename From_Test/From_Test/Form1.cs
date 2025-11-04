@@ -35,6 +35,7 @@ namespace From_Test
                     TestButton testButton = new TestButton( 
                         this, 
                         i,s,
+                        
                         new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "");
 
                     _buttonArrey[s, i] = testButton;
@@ -52,12 +53,6 @@ namespace From_Test
         }
         public TestButton GetTestButton(int x, int y)
         {
-            //配列外参照対策
-            if (x < 0 || x >= BOARD_SIZE_X) return null;
-            if (y < 0 || y >= BOARD_SIZE_Y) return null;
-
-
-
             return _buttonArrey[y, x];
         }
 
