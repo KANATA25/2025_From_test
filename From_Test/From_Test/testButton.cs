@@ -74,8 +74,39 @@ namespace From_Test
         }
         private void ClickEvent(object sender, EventArgs e)
         {
-            _form1.GetTestButton(_x,_y).SetEmable(true);
+            //楽な書き方
+            _form1.GetTestButton(_x,_y)?.Toggle();
+            _form1.GetTestButton(_x-1, _y)?.Toggle();
+            _form1.GetTestButton(_x+1, _y)?.Toggle();
+            _form1.GetTestButton(_x, _y-1)?.Toggle();
+            _form1.GetTestButton(_x, _y+1)?.Toggle();
             //ctrl+r2で変数名一喝変更
+
+            //かっちょいい書き方
+            /*  for(int i = 0:
+             * 
+             * 
+             */
+        }
+
+        /*
+         * private int [] [] _toggleDeta =
+         * {
+         *   new int[]{0,0},
+         *   new int[]{1,0},
+         *   new int[]{-1,0},
+         *   new int[]{0,1},
+         *   new int[]{0,-1},
+         */
+
+
+        /// <summary>
+        /// 各ボタンがクリックされた時に参照される奴
+        /// クリックイベント
+        /// </summary>
+        public void Toggle()
+        {
+            SetEmable(!_enable);
         }
 
     }

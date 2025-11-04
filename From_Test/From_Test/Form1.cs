@@ -53,6 +53,10 @@ namespace From_Test
         }
         public TestButton GetTestButton(int x, int y)
         {
+            // 配列外参照対策
+            if (x < 0 || x >= BOARD_SIZE_X) return null;
+            if (y < 0 || y >= BOARD_SIZE_Y) return null;
+
             return _buttonArrey[y, x];
         }
 
