@@ -32,7 +32,11 @@ namespace From_Test
             {
                 for (int s = 0; s < BOARD_SIZE_Y; s++)
                 {
-                    TestButton testButton = new TestButton( this, new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * s), new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "押すなよその二");
+                    TestButton testButton = new TestButton( 
+                        this, 
+                        i,s,
+                        
+                        new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "");
 
                     _buttonArrey[s, i] = testButton;
                     //コントロールにボタンの追加

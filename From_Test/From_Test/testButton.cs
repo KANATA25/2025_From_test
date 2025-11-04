@@ -21,8 +21,16 @@ namespace From_Test
         public Color _offColor = Color.Aqua;
 
         private bool _enable;
-
+        /// <summary>
+        /// 
         private Form1 _form1;
+        /// <summary>
+        /// 横位置 </summary>
+        private int _x;
+        /// <summary>
+        /// 縦位置 </summary> 
+        private int _y;
+
 
         /// <summary>
         /// onとoffの設定
@@ -43,13 +51,20 @@ namespace From_Test
         }
        
 
-        public TestButton(Form1 form1,Point position, Size size, string text)
+        public TestButton(Form1 form1, int x, int y, Size size, string text)
         {
-
+            //Formの参照を保管
             _form1 = form1;
+            //縦横位置保管
+            _x = x;
+            _y = y;
 
-            Location = position;
+            
+
+            Location = new Point(x * size.Width,y * size.Height);
+            //ボタンのサイズ設定
             Size = size;
+            //ボタンのテキスト設定
             Text = text;
 
             SetEmable(false);
@@ -59,7 +74,7 @@ namespace From_Test
         }
         private void ClickEvent(object sender, EventArgs e)
         {
-            _form1.GetTestButton(1, 2).SetEmable(true);
+            _form1.GetTestButton(_x,_y).SetEmable(true);
             //ctrl+r2で変数名一喝変更
         }
 
