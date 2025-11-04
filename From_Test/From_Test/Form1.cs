@@ -32,7 +32,7 @@ namespace From_Test
             {
                 for (int s = 0; s < BOARD_SIZE_Y; s++)
                 {
-                    TestButton testButton = new TestButton(new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * s), new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "押すなよその二");
+                    TestButton testButton = new TestButton( this, new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * s), new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "押すなよその二");
 
                     _buttonArrey[s, i] = testButton;
                     //コントロールにボタンの追加
@@ -41,11 +41,15 @@ namespace From_Test
                 }
 
             }
-            _buttonArrey[1, 1].SetEmable(true);
+            //_buttonArrey[0, 0].SetEmable(true);
 
 
 
 
+        }
+        public TestButton GetTestButton(int x, int y)
+        {
+            return _buttonArrey[y, x];
         }
 
 
