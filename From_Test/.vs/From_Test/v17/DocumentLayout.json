@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "From_Test\\Form1.cs",
               "ToolTip": "C:\\Users\\kamat\\Desktop\\\u3061\u30FC\u3080\u304B\u3044\\From_Test\\From_Test\\Form1.cs*",
               "RelativeToolTip": "From_Test\\Form1.cs*",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAwDoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAswBMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T04:54:58.221Z",
               "EditorCaption": ""
@@ -47,9 +47,9 @@
               "Title": "testButton.cs",
               "DocumentMoniker": "C:\\Users\\kamat\\Desktop\\\u3061\u30FC\u3080\u304B\u3044\\From_Test\\From_Test\\testButton.cs",
               "RelativeDocumentMoniker": "From_Test\\testButton.cs",
-              "ToolTip": "C:\\Users\\kamat\\Desktop\\\u3061\u30FC\u3080\u304B\u3044\\From_Test\\From_Test\\testButton.cs",
-              "RelativeToolTip": "From_Test\\testButton.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAAAFQAAAAXAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\kamat\\Desktop\\\u3061\u30FC\u3080\u304B\u3044\\From_Test\\From_Test\\testButton.cs*",
+              "RelativeToolTip": "From_Test\\testButton.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwv0AAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T05:05:47.106Z",
               "EditorCaption": ""
@@ -62,7 +62,7 @@
               "RelativeDocumentMoniker": "From_Test\\Program.cs",
               "ToolTip": "C:\\Users\\kamat\\Desktop\\\u3061\u30FC\u3080\u304B\u3044\\From_Test\\From_Test\\Program.cs",
               "RelativeToolTip": "From_Test\\Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T04:44:17.49Z",
               "EditorCaption": ""
@@ -73,10 +73,11 @@
               "Title": "Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
               "DocumentMoniker": "C:\\Users\\kamat\\Desktop\\\u3061\u30FC\u3080\u304B\u3044\\From_Test\\From_Test\\Form1.cs",
               "RelativeDocumentMoniker": "From_Test\\Form1.cs",
-              "ToolTip": "C:\\Users\\kamat\\Desktop\\\u3061\u30FC\u3080\u304B\u3044\\From_Test\\From_Test\\Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
-              "RelativeToolTip": "From_Test\\Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
+              "ToolTip": "C:\\Users\\kamat\\Desktop\\\u3061\u30FC\u3080\u304B\u3044\\From_Test\\From_Test\\Form1.cs [\u30C7\u30B6\u30A4\u30F3]*",
+              "RelativeToolTip": "From_Test\\Form1.cs [\u30C7\u30B6\u30A4\u30F3]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T02:57:37.122Z"
+              "WhenOpened": "2025-10-21T02:57:37.122Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
             }
           ]
         }

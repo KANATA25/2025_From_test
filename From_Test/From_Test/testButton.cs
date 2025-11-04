@@ -23,6 +23,8 @@ namespace From_Test
         private bool _enable;
         /// <summary>
         /// 
+       
+
         private Form1 _form1;
         /// <summary>
         /// 横位置 </summary>
@@ -67,7 +69,7 @@ namespace From_Test
             //ボタンのテキスト設定
             Text = text;
 
-            SetEmable(false);
+             SetEmable(false);
 
             Click += ClickEvent;
             

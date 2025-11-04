@@ -35,7 +35,6 @@ namespace From_Test
                     TestButton testButton = new TestButton( 
                         this, 
                         i,s,
-                        
                         new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "");
 
                     _buttonArrey[s, i] = testButton;
