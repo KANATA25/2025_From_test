@@ -10,6 +10,10 @@ namespace From_Test
 {
     public class TestButton : Button
     {
+        //ランダム関数
+        private static Random random = new Random();
+        private bool Boolrandom;
+
         /// <summary>
         /// on の時の色
         /// </summary>
@@ -55,6 +59,8 @@ namespace From_Test
 
         public TestButton(Form1 form1, int x, int y, Size size, string text)
         {
+            Boolrandom = random.Next(0, 2) == 0;
+
             //Formの参照を保管
             _form1 = form1;
             //縦横位置保管
@@ -69,7 +75,7 @@ namespace From_Test
             //ボタンのテキスト設定
             Text = text;
 
-             SetEmable(false);
+             SetEmable(Boolrandom);
 
             Click += ClickEvent;
             
@@ -82,13 +88,57 @@ namespace From_Test
             _form1.GetTestButton(_x+1, _y)?.Toggle();
             _form1.GetTestButton(_x, _y-1)?.Toggle();
             _form1.GetTestButton(_x, _y+1)?.Toggle();
+
+
+            //判定
+            int h = 0;
+
+            if( _form1.GetTestButton(0,0)._enable == true)
+            {
+                h = 0;
+                for(int i = 0; i <3 ; i++ )
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        if(_form1.GetTestButton(i, j)._enable != true)
+                        {
+                            break;
+                        }
+                        h++;
+                    }
+                }
+            }
+
+
+            if (_form1.GetTestButton(0, 0)._enable == false)
+            {
+                h = 0;
+                for (int i = 0; i < 3; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        if (_form1.GetTestButton(i, j)._enable != false)
+                        {
+                            break;
+                        }
+                        h++;
+                    }
+                }
+            }
+
+            if(h == 9)
+            {
+                MessageBox.Show("クリアだお");
+                Application.Exit();
+            }
+
             //ctrl+r2で変数名一喝変更
 
-            //かっちょいい書き方
-            /*  for(int i = 0:
-             * 
-             * 
-             */
+                //かっちょいい書き方
+                /*  for(int i = 0:
+                 * 
+                 * 
+                 */
         }
 
         /*
