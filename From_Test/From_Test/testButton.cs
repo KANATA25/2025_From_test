@@ -83,24 +83,24 @@ namespace From_Test
         private void ClickEvent(object sender, EventArgs e)
         {
             //楽な書き方
-            _form1.GetTestButton(_x,_y)?.Toggle();
-            _form1.GetTestButton(_x-1, _y)?.Toggle();
-            _form1.GetTestButton(_x+1, _y)?.Toggle();
-            _form1.GetTestButton(_x, _y-1)?.Toggle();
-            _form1.GetTestButton(_x, _y+1)?.Toggle();
+            _form1.GetTestButton(_x, _y)?.Toggle();
+            _form1.GetTestButton(_x - 1, _y)?.Toggle();
+            _form1.GetTestButton(_x + 1, _y)?.Toggle();
+            _form1.GetTestButton(_x, _y - 1)?.Toggle();
+            _form1.GetTestButton(_x, _y + 1)?.Toggle();
 
 
             //判定
             int h = 0;
 
-            if( _form1.GetTestButton(0,0)._enable == true)
+            if (_form1.GetTestButton(0, 0)._enable == true)
             {
                 h = 0;
-                for(int i = 0; i <3 ; i++ )
+                for (int i = 0; i < 3; i++)
                 {
                     for (int j = 0; j < 3; j++)
                     {
-                        if(_form1.GetTestButton(i, j)._enable != true)
+                        if (_form1.GetTestButton(i, j)._enable != true)
                         {
                             break;
                         }
@@ -126,20 +126,39 @@ namespace From_Test
                 }
             }
 
-            if(h == 9)
+            if (h == 9)
             {
-                MessageBox.Show("クリアだお");
-                Application.Exit();
+                DialogResult Result = MessageBox.Show("クリアだお", "", MessageBoxButtons.YesNo);
+                if (Result == DialogResult.Yes)
+                {
+
+                    for (int p = 0; p < 3; p++)
+                    {
+                        for (int q = 0; q < 3; q++)
+                        {
+                            _form1.GetTestButton(p, q).SetEmable(random.Next(0, 2) == 0);
+                        }
+
+                    }
+                }
+                else
+
+                    Application.Exit();
             }
-
-            //ctrl+r2で変数名一喝変更
-
-                //かっちょいい書き方
-                /*  for(int i = 0:
-                 * 
-                 * 
-                 */
         }
+
+
+
+
+
+        //ctrl+r2で変数名一喝変更
+
+        //かっちょいい書き方
+        /*  for(int i = 0:
+         * 
+         * 
+         */
+
 
         /*
          * private int [] [] _toggleDeta =
